@@ -11,6 +11,7 @@ var nodemailer = require('nodemailer');
 var session =require('express-session')
 var gaussian = require('gaussian');
 var fs = require('fs');
+var ip = require('ip')
 
 
 
@@ -333,7 +334,7 @@ app.post('/process_register', urlencodedParser, function(req,res){
 
 
 
-var server = app.listen(8081, '10.8.250.32' ,function () {
+var server = app.listen(8081, ip.address() ,function () {
    var host = server.address().address
    console.log(host);
    var port = server.address().port
