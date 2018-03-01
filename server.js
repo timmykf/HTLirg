@@ -128,11 +128,13 @@ app.get('/logout', function(req,res){
     req.session.destroy(function(err){
         if(err){
             console.log(err);
+            res.status(404).send('Logout unseccesfull')
         }else{
             res.redirect('/');
         }
     })
 });
+
     
 app.get('/',function(req,res){
     console.log(req.session);  
@@ -332,6 +334,21 @@ app.post('/process_register', urlencodedParser, function(req,res){
         });
     });});
 
+app.post('/newTest',urlencodedParser, (req,res)=>{
+     
+})
+
+app.post('/deleteTest',urlencodedParser,(req,res)=>{
+
+})
+
+app.post('/editTest',urlencodedParser,(req,res)=>{
+
+})
+
+app.post('/insertGrades',urlencodedParser,(req,res)=>{
+    
+})
 
 
 var server = app.listen(8081, ip.address() ,function () {
