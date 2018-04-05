@@ -27,6 +27,7 @@
     "express-session": "^1.15.6",
     "gaussian": "^1.1.0",
     "ip": "^1.1.5",
+    "mongodb": "^3.0.5",
     "mysql": "^2.15.0",
     "nodemailer": "^4.6.0"
   }
