@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Projekt - Notenmanagement</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
-    <h1 class="badge badge-info" style="font-size:40px;" >Notenmanagement</h1>
-    <br>
-    <br>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <h1 class="badge badge-info" style="font-size:40px;">Notenmanagement</h1>
+        
+        <div id="myDiv" class="collapse navbar-collapse btn-group-lg" role="group" style="display=none">
+                <a href="neuereintrag.html" class="btn btn-outline-info" style="margin-left: 70px">Neuer Eintrag</a>
+                <a href="allepruefungen.html" class="btn btn-outline-info">Alle Prüfungen</a>
+                <a href="notenstand.html" class="btn btn-outline-info">Notenstand</a>
+        </div>
 
-    <div class="btn-group" role="group">
-        <a href="neuereintrag.html" class="btn btn-outline-info">Neuer Eintrag</a>
-        <a href="allepruefungen.html" class="btn btn-outline-info">Alle Prüfungen</a>
-        <a href="notenstand.html" class="btn btn-outline-info">Notenstand</a>
-    </div>
-
+        <button id="logout_btn" class="btn btn-outline-danger" onclick="logout()">Abmelden</button>
+    </nav>
+   
     <script src="index.js"></script>
 </body>
 

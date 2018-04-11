@@ -11,32 +11,31 @@
 </head>
 
 <body>
-    <h1 class="badge badge-info" style="font-size:40px;">Notenmanagement</h1>
-    <br>
-    <br>
-
-    <div class="btn-group" role="group">
-            <a href="neuereintrag.html" class="btn btn-info">Neuer Eintrag</a>
-            <a href="allepruefungen.html" class="btn btn-outline-info">Alle Prüfungen</a>
-            <a href="notenstand.html" class="btn btn-outline-info">Notenstand</a>
-    </div>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <h1 class="badge badge-info" style="font-size:40px;">Notenmanagement</h1>
+            
+            <div class="collapse navbar-collapse btn-group-lg" role="group" >
+                    <a href="neuereintrag.html" class="btn btn-outline-info" style="margin-left: 70px">Neuer Eintrag</a>
+                    <a href="allepruefungen.html" class="btn btn-outline-info">Alle Prüfungen</a>
+                    <a href="notenstand.html" class="btn btn-outline-info">Notenstand</a>
+            </div>
+            <button id="logout_btn" class="btn btn-outline-danger" onclick="logout()">Abmelden</button>
+    </nav>
     <br><br>
-
-    <div id="NewTestForm">
+    <div id="NewTestForm" align="center">
         <form>
-            <input id="input_date" type="text" class="form-control" style="width: 20%" placeholder="Datum" onMouseOver="(this.type='date')"
+            <input name="name_date" id="input_date" type="text" class="form-control" style="width: 20%" placeholder="Datum" onMouseOver="(this.type='date')"
                 onMouseOut="(this.type='date')">
-            <input id="input_thema" type="text" placeholder="Thema" class="form-control" style="width: 20%">
-            <input id="input__art" list="input_art" name="Art" placeholder="Art" class="form-control" style="width: 20%">
-            <datalist id="input_art">
+            <input name="name_thema" id="input_thema" type="text" placeholder="Thema" class="form-control" style="width: 20%">
+            <input name="name_art" id="input_art" list="input__art" name="Art" placeholder="Art" class="form-control" style="width: 20%">
+            <datalist id="input__art">
                 <option value="Lernzielkontrolle">
-                    <option value="Test">
-                        <option value="Schularbeit">
+                <option value="Test">
+                <option value="Schularbeit">
             </datalist>
-            <input type="submit" value="Neuen Eintrag speichern" class="btn btn-light">
+            <input type="submit" value="Neuen Eintrag speichern" class="btn btn-light" style="width: 20%" onclick="newEntry()">
         </form>
     </div>
-
     <script src="index.js"></script>
 </body>
 
